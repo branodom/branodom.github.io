@@ -1,0 +1,386 @@
+@font-face {
+    font-family: "Revalia";
+    src: url("../assets/fonts/Revalia-Regular.ttf")
+}
+@font-face {
+    font-family: "Gafata";
+    src: url("../assets/fonts/Gafata-Regular.ttf")
+}
+
+/*
+    COLOR PALETTE:
+    - #F7567C (Bright pink)
+    - #9BA2FF (Vista blue)
+    - #232ED1 (Palatinate blue)
+    - #101D42 (Oxford blue)
+    - #0D1317 (Rich black)
+*/
+body {
+    margin: 0;
+    background-image: url(../assets/images/tile-background.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Gafata;
+    color: aliceblue;
+    font-size: 100%;
+}
+#content-wrap {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #080c0e;
+    -webkit-box-shadow: 0px 11px 33px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 11px 33px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 11px 33px 11px rgba(0,0,0,0.75);
+}
+/* Padding for main content: Fade-in animation */
+.content-padding {
+    padding: 0 40px;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.sidebar img, .main-content img {
+    display: block;
+    height: 70%;
+    width: 70%;
+    margin: 0 auto;
+}
+.sidebar img {
+    -webkit-box-shadow: 0px 10px 23px -3px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 10px 23px -3px rgba(0,0,0,1);
+    box-shadow: 0px 10px 23px -3px rgba(0,0,0,1);
+}
+.main-content img {
+    margin: 0px auto 50px auto;
+    border: 1px solid #232ED1
+}
+h1, h2, h3 {
+    font-family: Revalia;
+}
+main, footer {
+    margin: 0 auto;
+    width: 100%;
+}
+/* Navigation Bar Styles */
+.navbar {
+    overflow: hidden;
+    background-color: #101D42;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 2px solid #0b142c;
+    z-index: 1;
+    
+}
+.navbar ul li {
+    display: inline-block;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    font-family: Revalia;
+    font-size: smaller;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.navbar .nav-btn {
+    background-color: #0D1317;
+    transition: 0.3s;
+    border: 1px solid #9BA2FF;
+    border-radius: 25px;
+    margin: 0 10px;
+    width: 9vw;
+}
+.navbar .nav-btn:hover {
+    background: #232ED1;
+    color: white;
+    border-color: #F7567C;
+}
+.navbar #logo {
+    display: inline-block;
+    width: 200px;
+}
+#spacer {
+    width: 100%;
+    height: 82px;
+}
+/* Sidebar Styles */
+.sidebar {
+    display: block;
+    width: 40%;
+    float: left;
+    text-align: center;
+    margin: 30px 0;
+    padding: 40px;
+    box-sizing: border-box;
+    line-height: 2.5;
+    font-family: Revalia;
+}
+#sidebar-header {
+    font-size: 0.8em;
+    line-height: 1;
+}
+#my-name {
+    font-size: 3vw;
+}
+.job-title {
+    font-size: 1.25vw;
+    font-weight: normal;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+.sidebar ul li {
+    padding: 5px;
+}
+#skills li {
+    font-weight: normal;
+    font-size: 1vw;
+    text-align: center;
+}
+#contact {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+#contact a {
+    transition: 0.3s;
+}
+#contact a:hover {
+    color: #F7567C;
+}
+.social-button {
+    font-size: 2vw;
+    padding: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+.social-button:hover {
+    color:#9BA2FF
+}
+/* Main Content Styles */
+.main-content {
+    display: block;
+    width: 60%;
+    float: right;
+    margin: 30px 0;
+    background-color: #0D1317;
+    border-radius: 50px;
+}
+section {
+    margin: 50px;
+    text-align: center;
+}
+section header, section p, section ul {
+    text-align: left;
+    margin: 16px 0;
+}
+.main-content section {
+    border: 2px solid #9BA2FF;
+    border-radius: 50px;
+    background-color: #101D42;
+    padding: 50px 50px 70px 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.main-content section p, .main-content section ul {
+    line-height: 1.75;
+    padding: 0 15px;
+}
+.section-header {
+    display: inline-block;
+    font-size: 2.1vw;
+    border-bottom: 1px solid #F7567C;
+    padding: 20px 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.project-title {
+    font-family: Revalia;
+    font-weight: normal;
+    font-size: 20px;
+}
+#projects header strong {
+    font-size: 20px;
+}
+#projects p {
+    margin: 30px 0;
+}
+.view-button {
+    text-align: center;
+    padding: 20px;
+}
+.view-button a {
+    background-color: #0D1317;
+    border: 1px solid #9BA2FF;
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    transition: 0.3s;
+}
+.view-button a:hover {
+    background-color: #232ED1;
+    border: 1px solid #F7567C;
+}
+#education h4, .exp-title {
+    font-family: Revalia;
+    font-size: 20px;
+}
+#education h5 {
+    font-size: 20px;
+}
+.dates {
+    font-size: 18px;
+    text-align: left;
+}
+#experience .dates {
+    font-style: italic;
+}
+#experience ul {
+    margin: 10px;
+    padding-top: 10px;
+}
+#experience ul li {
+    margin: 10px 0;
+}
+footer {
+    clear: both;
+    text-align: center;
+    font-family: Revalia;
+    font-size: 16px;
+    padding: 20px 20px 50px 20px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1310px) {
+    .view-button {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    a.mobile-button {
+        display: block;
+        padding: 10px 25px;
+        margin: 10px 0;
+    }
+    .sidebar ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    #skills li {
+        line-height: 1.25;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #content-wrap {
+        width: 85%;
+    }
+    .navbar {
+        clear: both;
+        position: absolute;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        width: 85%;
+        height: 70px;
+    }
+    .navbar #logo {
+        align-content: center;
+    }
+    a.nav-btn {
+        display: none;
+    }
+    .sidebar {
+        clear: both;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+    .sidebar img {
+        width: 40%;
+        height: 40%;
+    }
+    #my-name{
+        margin-top: 50px;
+        font-size: 5vw;
+    }
+    .job-title {
+        font-size: 2.25vw;
+    }
+    #skills h3 {
+        font-size: 3vw;
+    }
+    .sidebar ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+    #skills li {
+        font-size: 1.8vw;
+        line-height: 2;
+    }
+    section#contact {
+        margin-bottom: 0;
+    }
+    #contact h3 {
+        font-size: 3vw;
+    }
+    .social-button {
+        font-size: 8vw;
+    }
+    .main-content {
+        clear: both;
+        width: 100%;
+        margin-top: 0;
+    }
+    .main-content section {
+        font-size: 100%;
+        margin: 30px 10px;
+    }
+    .section-header {
+        font-size: 4vw;
+    }
+    section p {
+        font-size: 2vw;
+    }
+    #experience ul {
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    .sidebar ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    .social-button {
+        font-size: 5vw;
+    }
+    #skills li {
+        line-height: 1.25;
+    }
+}
